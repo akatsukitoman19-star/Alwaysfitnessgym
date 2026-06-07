@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Orbitron", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --color-neon-blue: #00f3ff;
+  --color-neon-purple: #9d4edf;
+  --color-dark-surface: #0a0a0c;
+  --color-dark-card: #121217;
+
+  --animate-pulse-slow: pulse-slow 8s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  --animate-float: float 7s ease-in-out infinite;
+
+  @keyframes pulse-slow {
+    0%, 100% { opacity: 0.2; transform: scale(1); }
+    50% { opacity: 0.6; transform: scale(1.15); }
+  }
+  @keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-12px) rotate(3deg); }
+  }
+}
+
+@utility neon-glow {
+  text-shadow: 0 0 10px rgba(0, 243, 255, 0.6), 0 0 20px rgba(0, 243, 255, 0.3);
+}
+
+@utility neon-glow-purple {
+  text-shadow: 0 0 10px rgba(157, 78, 223, 0.6), 0 0 20px rgba(157, 78, 223, 0.3);
+}
+
+@utility neon-border {
+  box-shadow: 0 0 15px rgba(0, 243, 255, 0.25), inset 0 0 10px rgba(0, 243, 255, 0.1);
+}
+
+@utility neon-border-purple {
+  box-shadow: 0 0 15px rgba(157, 78, 223, 0.2), inset 0 0 10px rgba(157, 78, 223, 0.1);
+}
+
+@utility glassmorphism {
+  background: rgba(12, 12, 17, 0.7);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+@utility space-perspective {
+  perspective: 800px;
+}
+
+@utility preserve-3d {
+  transform-style: preserve-3d;
+}
+
+/* Custom Hide Scrollbar rule combining clean standard CSS syntax and Webkit prefixes */
+.hide-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari and Opera */
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+/* Custom premium metallic grid background */
+.mesh-bg {
+  background-color: #030305;
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(0, 243, 255, 0.07) 0, transparent 45%),
+    radial-gradient(at 100% 0%, rgba(157, 78, 223, 0.07) 0, transparent 45%),
+    radial-gradient(at 50% 100%, rgba(0, 243, 255, 0.05) 0, transparent 50%),
+    linear-gradient(rgba(255, 255, 255, 0.005) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.005) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 100% 100%, 48px 48px, 48px 48px;
+}

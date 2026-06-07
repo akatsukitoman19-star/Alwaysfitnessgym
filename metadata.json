@@ -1,0 +1,6 @@
+{
+  "name": "Always Fitness Gym Banswara",
+  "description": "Premium 3D animated fitness website for Always Fitness Gym Banswara, Rajasthan.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
